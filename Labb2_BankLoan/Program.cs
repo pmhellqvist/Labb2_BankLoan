@@ -5,6 +5,54 @@ namespace Labb2_BankLoan
     class MainClass
     {
 
+        public static double Interest(int loanAmount, int years)
+        {
+            double totalAmount = 0;
+
+            if (years == 1)
+            {
+                totalAmount = loanAmount * 1.03;
+            }
+            else if (years == 2)
+            {
+                totalAmount = loanAmount * 1.04;
+            }
+            else if (years == 3)
+            {
+                totalAmount = loanAmount * 1.05;
+            }
+            else if (years == 4)
+            {
+                totalAmount = loanAmount * 1.06;
+            }
+            else if (years == 5)
+            {
+                totalAmount = loanAmount * 1.07;
+            }
+            else if (years == 6)
+            {
+                totalAmount = loanAmount * 1.08;
+            }
+            else if (years == 7)
+            {
+                totalAmount = loanAmount * 1.09;
+            }
+            else if (years == 8)
+            {
+                totalAmount = loanAmount * 1.10;
+            }
+            else if (years == 9)
+            {
+                totalAmount = loanAmount * 1.11;
+            }
+            else if (years == 10)
+            {
+                totalAmount = loanAmount * 1.12;
+            }
+
+            return totalAmount;
+
+        }
         
 
         public static void Main(string[] args)
