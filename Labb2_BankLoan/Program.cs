@@ -53,7 +53,14 @@ namespace Labb2_BankLoan
             return totalAmount;
 
         }
-        
+        public static double MonthlyPayment(double totalAmount, double years)
+        {
+            double numberOfMonths = years * 12;
+
+            double amortization = totalAmount / numberOfMonths;
+            return Math.Round(amortization, 0);
+
+        }
 
         public static void Main(string[] args)
         {
@@ -67,7 +74,12 @@ namespace Labb2_BankLoan
             Console.Write("\nÖnskad återbetalningstid (1-10 år): ");
             years = int.Parse(Console.ReadLine());
 
-            
+            totalAmount = Interest(loanAmount, years);
+
+            Console.WriteLine("\nDitt lån:");
+            Console.WriteLine("Din månadskostnad kommer bli: " + MonthlyPayment(totalAmount, years) + " kr");
+            Console.WriteLine("Totalt återbetalningsbelopp: " + totalAmount + " kr");
+            Console.ReadLine();
         }
     }
 }
